@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <form class="container">
+      <div class="mx-4">
+        <h1 class="mt-4">Person Data</h1>
+        <button
+          onclick="openModal()"
+          type="button"
+          id="new"
+          class="btn btn-success mt-4"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          data-bs-whatever=""
+        >
+          Add Person
+        </button>
+      </div>
+
+      <div class="mt-4">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Gender</th>
+              <th>Address</th>
+              <th>Date of Birth</th>
+              <th class="acao">Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="float-end">
+        <nav aria-label="...">
+          <ul class="pagination">
+            <li class="page-item disabled">
+              <span class="page-link">Previous</span>
+            </li>
+            <li class="page-item active">
+              <a class="page-link" href="#">1</a>
+            </li>
+            <li class="page-item disabled">
+              <a class="page-link" href="#">Next</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Add Person</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="m-first" class="col-form-label"
+                    >First Name:</label
+                  >
+                  <input type="text" class="form-control" id="m-first" />
+                </div>
+                <div class="mb-3">
+                  <label for="m-last" class="col-form-label">Last Name:</label>
+                  <input type="text" class="form-control" id="m-last" />
+                </div>
+                <div class="mb-3">
+                  <label for="m-gender" class="col-form-label">Gender:</label>
+                  <input type="text" class="form-control" id="m-gender" />
+                </div>
+                <div class="mb-3">
+                  <label for="m-address" class="col-form-label">Address:</label>
+                  <input type="text" class="form-control" id="m-address" />
+                </div>
+                <div class="mb-3">
+                  <label for="m-date" class="col-form-label"
+                    >Date of Birth:</label
+                  >
+                  <input type="text" class="form-control" id="m-date" />
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                id="btnSalvar"
+                data-bs-dismiss="modal"
+                type="button"
+                class="btn btn-primary"
+              >
+                Save
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+    <script src="main.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
